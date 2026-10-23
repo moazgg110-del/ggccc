@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#075e54">
+<title>MockChat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <section id="home" class="page">
+    <header class="wa-top">
+      <div class="brand">MockChat</div>
+      <div class="top-icons">
+        <button id="searchOpen" class="ico">⌕</button>
+        <button id="mainMenu" class="ico">⋮</button>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-page="chats">الدردشات <span id="allUnread"></span></button>
+      <button class="tab" data-page="updates">التحديثات</button>
+      <button class="tab" data-page="communities">المجتمعات</button>
+      <button class="tab" data-page="calls">المكالمات</button>
+    </nav>
+
+    <main id="homeContent"></main>
+    <button id="homeFab" class="fab">＋</button>
+  </section>
+
+  <section id="conversation" class="page hidden">
+    <header class="chat-top">
+      <button id="backHome" class="ico">‹</button>
+      <button id="profileOpen" class="chat-photo">👤</button>
+      <div class="chat-title">
+        <strong id="conversationName">صديق</strong>
+        <small id="conversationStatus">متصل الآن</small>
+      </div>
+      <button id="videoCall" class="ico">▣</button>
+      <button id="voiceCall" class="ico">☎</button>
+      <button id="conversationMenu" class="ico">⋮</button>
+    </header>
+    <div id="insideSearch" class="inside-search hidden">
+      <input id="insideSearchInput" placeholder="بحث في المحادثة">
+    </div>
+    <main id="messageArea" class="message-area"></main>
+    <div id="replyBar" class="reply-bar hidden"></div>
+    <div id="typingBar" class="typing hidden">يكتب الآن...</div>
+    <footer class="composer">
+      <button id="plusBtn" class="composer-ico">＋</button>
+      <div class="write-box">
+        <button id="emojiBtn">☺</button>
+        <input id="messageInput" placeholder="اكتب رسالة" autocomplete="off">
+        <button id="stickerBtn">☺</button>
+        <button id="micBtn">🎙</button>
+      </div>
+      <button id="sendBtn" class="send">➤</button>
+    </footer>
+  </section>
+
+  <div id="modalLayer"></div>
+  <div id="toast"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
